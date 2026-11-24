@@ -1,36 +1,77 @@
-# Rajat Gupta
+<img src="banner.png" alt="Copper layers of boards I designed: Mars Rover PDB v2, Zynq-7020 trading board, FPGA LED controller, nRF52 wrist pod" width="100%">
 
-Electrical Engineering @ NUS · Embedded, power & digital hardware · NUS Mars Rover
+### FPGA & digital design, from RTL to PCB
 
-I'm a second-year Electrical Engineering student at NUS. I design my own boards, bring them up, and put real-time logic on FPGAs, and I document what broke along the way.
+Second-year Electrical Engineering student at NUS. I write Verilog, verify it bit for bit against a software golden model, and design the boards it runs on. Everything in the banner above is a real copper layer from a board I laid out.
 
-B.Eng. Electrical Engineering, National University of Singapore (expected 2029). Advanced Electronics · Minor in Data Science & Analytics · GPA 4.6/5.0.
+[**Portfolio**](https://silverajat.github.io) · [LinkedIn](https://www.linkedin.com/in/rajat-gupta-ee) · [Email](mailto:rg192007@gmail.com) · Looking for summer 2027 internships in FPGA, digital design and verification
 
-## Currently building
+---
 
-| Project | What it is | Status |
-|---|---|---|
-| **Music-Sync LED Controller** | A 4-layer board I designed (Gowin GW2AR-18 FPGA + ESP32-C3) that lights my room in time with music. Verilog I2S mic input, 3-band filter bank and beat detector on the FPGA; phone and laptop control over Bluetooth. When the flash programmer failed, I wrote a JTAG loader so the ESP32 configures the FPGA at every boot | Working · moving the per-LED lighting engine onto the FPGA |
-| **[Lift Tracker Wearable](https://github.com/silverajat/lift-tracker)** | Wrist motion-sensor pod and Android app that count gym reps in real time: 32 of 33 recorded sets exact, all within one rep, checked against a Python reference model in CI. Custom 4-layer pod board (nRF52840, BMI270) | In daily use with the prototype pod · custom board ordered |
-| **Crypto Order-Flow Engine** | Verilog FPGA engine that turns live crypto market data into an order book and trading signals, with a RISC-V control CPU and a hardware risk gate. All 102,044 events of a 69-minute recorded stream matched a software reference exactly | RTL verified in simulation · [custom Zynq-7020 board](https://github.com/silverajat/ofe-trader-board) ordered |
-| **[Protocol Emulator ASIC](https://github.com/silverajat/protocol-emulator)** | A small reprogrammable chip that speaks UART, SPI and I2C, for Jane Street's tapeout competition (Tiny Tapeout, IHP 130 nm). Prototyped on my own FPGA board against real sensor chips | In progress · due Jan 2027 |
-| **NUS Mars Rover – Power Distribution Board** | Designed the rover's power distribution board (PDB v1) in KiCad: battery distribution, DC-DC converter rails, voltage and current sensing. Designed PDB v2 end to end: a 4-layer high-current board with precharge, brake chopper, eFuse protection and hardware e-stop logic | v1 designed · v2 going to fabrication |
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/silverajat/ofe-trader-board"><img src="card_zynq.png" alt="Zynq-7020 trading board copper layers"></a>
 
-## Earlier projects
+**Crypto order-flow engine + Zynq-7020 board**<br>
+Verilog engine that rebuilds a live order book and computes trading signals in hardware, with a PicoRV32 control CPU and a hardware risk gate.
 
-- **CHOMS – Coral Health Monitoring System** (2023): Arduino monitor with pH, temperature and turbidity sensors. Gold Medal and Best Project, 1st of 77 teams at JISF.
-- **Regenerative Braking System** (2026, NUS team project): regen braking concept for an electric bus, with a buck-boost charging stage and BMS logic.
-- **Smart Solar Street Lamp** (2025, NUS team project): off-grid 24 V LiFePO4 + 200 W PV system with Arduino PWM dimming control.
-- **Autonomous Obstacle-Course Robot** (2025, NUS team project): Arduino robot with H-bridge motor drive and ultrasonic sensing.
+- **102,044 / 102,044** events of a 69-minute real market stream identical to the C++ reference
+- Packet-to-features latency **p50 3.4 µs, p99 7.6 µs** after a tick-ladder book redesign
+- Own **6-layer Zynq-7020 board** with DDR3L · RTL verified · board ordered
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/silverajat/protocol-emulator"><img src="card_asic.png" alt="Protocol emulator ASIC concept: 8x4 Tiny Tapeout tiles"></a>
 
-## Skills
+**Protocol emulator ASIC**<br>
+A small chip that can be reprogrammed after fabrication to speak UART, SPI and I2C. Entry for Jane Street's tapeout competition on Tiny Tapeout (IHP 130 nm).
 
-- **Hardware:** KiCad (4-layer PCB design), power electronics, JLCPCB assembly, ESP32, nRF52, Arduino
-- **Digital design:** Verilog, FPGA (Gowin, AMD Zynq), cocotb, RISC-V, Tiny Tapeout
-- **Languages:** Python, C, Kotlin, R
-- **Tools:** Git, Linux
+- Prototyping the RTL on my own FPGA board against real sensor chips
+- cocotb tests, gate-level simulation
+- In progress · due Jan 2027
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/silverajat/ledctl"><img src="card_led.png" alt="FPGA LED controller board copper layers"></a>
 
-## Contact
+**Music-sync LED controller**<br>
+My own 4-layer board (Gowin GW2AR-18 FPGA + ESP32-C3) that lights a room in time with music.
 
-[rg192007@gmail.com](mailto:rg192007@gmail.com)
-<!-- LinkedIn: add later -->
+- I2S mic input, 3-band filter bank and beat detector in Verilog
+- Wrote a JTAG loader so the ESP32 configures the FPGA at boot when the flash programmer failed
+- **Working** · moving the per-LED engine onto the FPGA
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/silverajat/lift-tracker"><img src="card_pod.png" alt="nRF52840 wrist pod board copper layers"></a>
+
+**Lift tracker wearable**<br>
+Wrist motion-sensor pod and Android app that count gym reps in real time.
+
+- **32 of 33** recorded sets counted exactly, all within one rep
+- Kotlin pipeline checked against a Python reference model in CI
+- Custom 4-layer nRF52840 + BMI270 pod board · arriving soon
+</td>
+</tr>
+</table>
+
+<a href="https://silverajat.github.io/#rover"><img src="card_pdb.png" alt="Mars Rover power distribution board v2" width="49%" align="right"></a>
+
+**NUS Mars Rover · power distribution**<br>
+Designed the rover's PDB v1, then PDB v2 end to end: a 4-layer high-current board with precharge, brake chopper, eFuse protection and hardware e-stop logic.
+
+<br clear="right">
+
+<details>
+<summary><b>LED controller demo</b> (preview of the lighting engine on a real song)</summary>
+<br>
+<img src="ledctl_demo.gif" alt="LED controller lighting preview reacting to bass, mid and treble" width="640">
+</details>
+
+### Toolbox
+
+**Digital design:** Verilog · cocotb · Vivado · Gowin EDA · Verilator · RISC-V (PicoRV32) · Tiny Tapeout<br>
+**Hardware:** KiCad (4- and 6-layer) · DDR3L layout · power electronics · JLCPCB assembly · ESP32 · nRF52<br>
+**Software:** Python · C / C++ · Kotlin · Git · Linux
+
+**Earlier:** CHOMS coral-health monitor, Gold Medal and Best Project (1st of 77 teams) at JISF 2023 · VANDA International Science Competition, Gold (11th globally)
