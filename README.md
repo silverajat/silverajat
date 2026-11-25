@@ -62,11 +62,9 @@ Designed the rover's PDB v1, then PDB v2 end to end: a 4-layer high-current boar
 
 <br clear="right">
 
-<details>
-<summary><b>LED controller demo</b> (preview of the lighting engine on a real song)</summary>
-<br>
-<img src="ledctl_demo.gif" alt="LED controller lighting preview reacting to bass, mid and treble" width="640">
-</details>
+**The LED controller, for real:** the strip around my pinboard synced to a song: build-up, one dark beat, then the drop.
+
+<a href="https://github.com/silverajat/ledctl"><img src="https://raw.githubusercontent.com/silverajat/ledctl/main/docs/images/demo_music.gif" alt="My LED controller lighting the strip around a pinboard in sync with a song: build-up, one dark beat, then the drop" width="640"></a>
 
 ### Toolbox
 
