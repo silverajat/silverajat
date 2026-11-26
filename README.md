@@ -21,14 +21,14 @@ Verilog engine that rebuilds a live order book and computes trading signals in h
 - Own **6-layer Zynq-7020 board** with DDR3L · RTL verified · board ordered
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/silverajat/protocol-emulator"><img src="card_asic.png" alt="Protocol emulator ASIC concept: 8x4 Tiny Tapeout tiles"></a>
+<img src="card_asic.png" alt="Protocol emulator ASIC concept: 8x4 Tiny Tapeout tiles">
 
 **Protocol emulator ASIC**<br>
-A small chip that can be reprogrammed after fabrication to speak UART, SPI and I2C. Entry for Jane Street's tapeout competition on Tiny Tapeout (IHP 130 nm).
+A small chip that runs wire protocols as programs, so the same silicon can speak UART, SPI, I2C or CAN. Entry for Jane Street's open ASIC competition (Tiny Tapeout, IHP 130 nm).
 
-- Prototyping the RTL on my own FPGA board against real sensor chips
-- cocotb tests, gate-level simulation
-- In progress · due Jan 2027
+- Being prototyped on the FPGA of my own LED-controller board
+- cocotb tests against a Python reference model
+- In progress · repo goes public with the submission (Jan 2027)
 </td>
 </tr>
 <tr>
