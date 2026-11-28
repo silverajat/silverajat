@@ -1,10 +1,10 @@
 <img src="banner.png" alt="Copper layers of boards I designed: Mars Rover PDB v2, Zynq-7020 trading board, FPGA LED controller, nRF52 wrist pod" width="100%">
 
-### FPGA & digital design, from RTL to PCB
+### I design FPGA logic and the boards it runs on
 
 Second-year Electrical Engineering student at NUS. I write Verilog, verify it bit for bit against a software golden model, and design the boards it runs on. Everything in the banner above is a real copper layer from a board I laid out.
 
-[**Portfolio**](https://silverajat.github.io) · [LinkedIn](https://www.linkedin.com/in/rajat-gupta-ee) · [Email](mailto:rg192007@gmail.com) · Looking for summer 2027 internships in FPGA, digital design and verification
+[**Portfolio**](https://silverajat.github.io) · [LinkedIn](https://www.linkedin.com/in/rajat-gupta-ee) · [Email](mailto:rg192007@gmail.com) · Looking for summer 2027 or May to December 2027 internships in FPGA, digital design and verification
 
 ---
 
