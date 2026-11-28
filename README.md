@@ -46,11 +46,11 @@ My own 4-layer board (Gowin GW2AR-18 FPGA + ESP32-C3) that lights a room in time
 <a href="https://github.com/silverajat/lift-tracker"><img src="card_pod.png" alt="nRF52840 wrist pod board copper layers"></a>
 
 **Lift tracker wearable**<br>
-Wrist motion-sensor pod and Android app that count gym reps in real time.
+Fitbit-sized wrist pod and Android app that count gym reps live, grade each rep's range of motion and end the set on their own.
 
-- **32 of 33** recorded sets counted exactly, all within one rep
+- **32 of 33** recorded sets counted exactly on the prototype, all within one rep
 - Kotlin pipeline checked against a Python reference model in CI
-- Custom 4-layer nRF52840 + BMI270 pod board · arriving soon
+- My own 4-layer nRF52840 + LSM6DSV16X board, 0.55 mm thinner than a Fitbit Air · **built, in daily use**
 </td>
 </tr>
 </table>
