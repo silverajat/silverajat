@@ -1,4 +1,4 @@
-<img src="banner.png" alt="Copper layers of boards I designed: Mars Rover PDB v2, Zynq-7020 trading board, FPGA LED controller, nRF52 wrist pod" width="100%">
+<img src="banner.png" alt="Copper layers of boards I designed: Mars Rover PDB v2, Zynq-7010 trading board, FPGA LED controller, nRF52 wrist pod" width="100%">
 
 ### I design FPGA logic and the boards it runs on
 
@@ -11,14 +11,14 @@ Second-year Electrical Engineering student at NUS. I write Verilog, verify it bi
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/silverajat/ofe-trader-board"><img src="card_zynq.png" alt="Zynq-7020 trading board copper layers"></a>
+<a href="https://github.com/silverajat/ofe-trader-board"><img src="card_zynq.png" alt="Zynq-7010 trading board copper layers"></a>
 
-**Crypto order-flow engine + Zynq-7020 board**<br>
+**Crypto order-flow engine + Zynq-7010 board**<br>
 Verilog engine that rebuilds a live order book and computes trading signals in hardware, with a PicoRV32 control CPU and a hardware risk gate.
 
 - **102,044 / 102,044** events of a 69-minute real market stream identical to the C++ reference
 - Packet-to-features latency **p50 3.4 µs, p99 7.6 µs** after a tick-ladder book redesign
-- Own **6-layer Zynq-7020 board** with DDR3L · RTL verified · board ordered
+- Own **6-layer Zynq-7010 board** with DDR3L · RTL verified · boards arrived, bring-up next
 </td>
 <td width="50%" valign="top">
 <img src="card_asic.png" alt="Protocol emulator ASIC concept: 8x4 Tiny Tapeout tiles">
